@@ -1,13 +1,13 @@
 //
-//  UIViewController+PEAdd.m
+//  UIViewController+PECommonAdd.m
 //  PECommon
 //
 //  Created by sky on 2020/11/10.
 //
 
-#import "UIViewController+PEAdd.h"
+#import "UIViewController+PECommonAdd.h"
 
-@implementation UIViewController (PEAdd)
+@implementation UIViewController (PECommonAdd)
 #pragma mark - 获取当前最顶层的UINavigationController
 + (UINavigationController *)currentNavigationController {
     UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;

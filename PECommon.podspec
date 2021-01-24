@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PECommon'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = '最基础最少代码的工具包'
 
   s.description      = <<-DESC

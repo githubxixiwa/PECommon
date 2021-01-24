@@ -1,13 +1,13 @@
 //
-//  UIColor+PEAdd.m
+//  UIColor+PECommonAdd.m
 //  PECommon
 //
 //  Created by sky on 2020/11/10.
 //
 
-#import "UIColor+PEAdd.h"
+#import "UIColor+PECommonAdd.h"
 
-@implementation UIColor (PEAdd)
+@implementation UIColor (PECommonAdd)
 /// hexStr 转 UIColor
 + (nullable UIColor *)colorWithHexString:(NSString *)hexStr {
     CGFloat r, g, b, a;

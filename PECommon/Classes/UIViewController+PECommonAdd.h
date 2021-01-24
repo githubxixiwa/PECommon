@@ -1,5 +1,5 @@
 //
-//  UIViewController+PEAdd.h
+//  UIViewController+PECommonAdd.h
 //  PECommon
 //
 //  Created by sky on 2020/11/10.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewController (PEAdd)
+@interface UIViewController (PECommonAdd)
 /**
  获取当前最顶层的NavigationController
 

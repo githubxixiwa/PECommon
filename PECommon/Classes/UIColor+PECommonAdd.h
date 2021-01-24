@@ -1,5 +1,5 @@
 //
-//  UIColor+PEAdd.h
+//  UIColor+PECommonAdd.h
 //  PECommon
 //
 //  Created by sky on 2020/11/10.
@@ -21,7 +21,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIColor (PEAdd)
+@interface UIColor (PECommonAdd)
 /// hexStr 转 UIColor
 + (nullable UIColor *)colorWithHexString:(NSString *)hexStr;
 

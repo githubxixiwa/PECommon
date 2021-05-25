@@ -14,7 +14,7 @@ static CGFloat _scale;
     _scale = [UIScreen mainScreen].bounds.size.width / 375.0;
 }
 
-+(float)sizeWidthScale:(float)value{
++ (float)sizeWidthScale:(float)value {
     return (float) (_scale * value);
 }
 

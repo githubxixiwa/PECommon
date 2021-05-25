@@ -27,6 +27,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// hexStr 转 UIColor 支持暗黑模式
 + (nullable UIColor *)colorWithHexString:(NSString *)hexStr darkHexString:(NSString *)darkHexStr;
+
+@property (nonatomic, readonly) CGFloat red;
+
+@property (nonatomic, readonly) CGFloat green;
+
+@property (nonatomic, readonly) CGFloat blue;
+
+- (CGFloat)alpha;
+
+- (nullable NSString *)hexString;
+
+- (nullable NSString *)hexStringWithAlpha;
 @end
 
 NS_ASSUME_NONNULL_END

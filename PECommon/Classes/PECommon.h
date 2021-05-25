@@ -14,6 +14,8 @@
 #import "UIView+PECommonAdd.h"
 #import "UIViewController+PECommonAdd.h"
 
+#import "NSDictionary+PECommon.h"
+
 #pragma mark - 屏幕尺寸相关
 #ifndef kScreenWidth
 #define kScreenWidth ([UIScreen mainScreen].bounds.size.width)

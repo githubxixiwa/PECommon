@@ -76,4 +76,57 @@ static inline NSUInteger sky_hexStrToInt(NSString *str) {
     sscanf([str UTF8String], "%X", &result);
     return result;
 }
+
+- (CGFloat)red {
+    CGFloat r = 0, g, b, a;
+    [self getRed:&r green:&g blue:&b alpha:&a];
+    return r;
+}
+
+- (CGFloat)green {
+    CGFloat r, g = 0, b, a;
+    [self getRed:&r green:&g blue:&b alpha:&a];
+    return g;
+}
+
+- (CGFloat)blue {
+    CGFloat r, g, b = 0, a;
+    [self getRed:&r green:&g blue:&b alpha:&a];
+    return b;
+}
+
+- (CGFloat)alpha {
+    return CGColorGetAlpha(self.CGColor);
+}
+
+- (NSString *)hexString {
+    return [self hexStringWithAlpha:NO];
+}
+
+- (NSString *)hexStringWithAlpha {
+    return [self hexStringWithAlpha:YES];
+}
+
+- (NSString *)hexStringWithAlpha:(BOOL)withAlpha {
+    CGColorRef color = self.CGColor;
+    size_t count = CGColorGetNumberOfComponents(color);
+    const CGFloat *components = CGColorGetComponents(color);
+    static NSString *stringFormat = @"%02x%02x%02x";
+    NSString *hex = nil;
+    if (count == 2) {
+        NSUInteger white = (NSUInteger)(components[0] * 255.0f);
+        hex = [NSString stringWithFormat:stringFormat, white, white, white];
+    } else if (count == 4) {
+        hex = [NSString stringWithFormat:stringFormat,
+               (NSUInteger)(components[0] * 255.0f),
+               (NSUInteger)(components[1] * 255.0f),
+               (NSUInteger)(components[2] * 255.0f)];
+    }
+    
+    if (hex && withAlpha) {
+        hex = [hex stringByAppendingFormat:@"%02lx",
+               (unsigned long)(self.alpha * 255.0 + 0.5)];
+    }
+    return hex;
+}
 @end

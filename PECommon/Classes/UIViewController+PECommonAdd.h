@@ -9,7 +9,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 获取keyWindos
+#define PEKeyWindow [UIViewController getKeyWindow]
+
 @interface UIViewController (PECommonAdd)
+
+/// 获取keyWindos
++ (UIWindow *)getKeyWindow;
+
 /**
  获取当前最顶层的NavigationController
 
@@ -23,6 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
  @return UIViewController
  */
 + (UIViewController *)currentTopViewController;
+
+/**
+ * present充满屏幕的vc
+ */
+- (void)presentFulleViewController:(UIViewController *)viewControllerToPresent animated: (BOOL)flag completion:(void (^ __nullable)(void))completion;
 @end
 
 NS_ASSUME_NONNULL_END
